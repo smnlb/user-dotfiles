@@ -1,0 +1,13 @@
+[Unit]
+Description=rclone mount for Mega
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount mega: /mnt/mega --vfs-cache-mode writes
+ExecStop=/bin/fusermount -u /mnt/mega
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,5 @@
+password=5092
+username=user
+port=5900
+address=192.168.0.12
+enable_auth=true
